@@ -15,6 +15,10 @@ int main(int argc, char **argv){
     ros::Subscriber state_sub = nh.subscribe<nav_msgs::Odometry>
             ("/warthog_velocity_controller/odom", 10, odomCb);
 
+    // use this to send Twists that would move the robot.
+    ros::Publisher cmdVelPub = nh.advertise<geometry_msgs::Twist>
+        ("/warthog_velocity_controller/cmd_vel", 10);
+
     ros::Rate rate(20.0);
 
     while (ros::ok())
