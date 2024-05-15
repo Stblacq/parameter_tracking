@@ -61,3 +61,22 @@ cd should be into the workspace, assuming that you were initially in `workspace/
 4. Build package.
 
 ### C++
+1. Create file in package `src`.
+2. Add it's entries in `CMakeLists.txt`, that is add_executable, set_target_properties, catkin_package dependencies, target_link_libraries, etc.
+3. Ensure that dependencies in CMakeLists.txt `find_package()` are added to `package.xml`
+4. Build the package. 
+
+## Execution
+Source the devel space
+```
+. devel/setup.bash
+```
+### ROS Core
+Run in one terminal,
+```
+roscore
+```
+And in another the nodes
+```
+rosrun aibr main_node [or what you changed the name of the node to in CMakeLists]
+```
