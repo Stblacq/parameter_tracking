@@ -27,6 +27,7 @@ Our workspace is now `aibr`
 
 ### Create Package 
 If you're cloning the package, skip the steps below to the next section
+
 cd `src`
 
 and run
@@ -53,7 +54,10 @@ cd .. && catkin build aibr
 cd should be into the workspace, assuming that you were initially in `workspace/src`
 
 ## Creating Nodes
+### Python
 1. Create a scripts dir
 2. Create a python file
 3. Set it to executable `chmod +x [script.py]`
 4. Build package.
+
+### C++
